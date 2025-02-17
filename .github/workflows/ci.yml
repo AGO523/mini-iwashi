@@ -89,8 +89,8 @@ jobs:
     env:
       REGION: asia-northeast1
       SERVICE_NAME: mini-iwashi
-      REPOSITORY: mini-iwashi
-      IMAGE_NAME: mini-iwashi
+      REPOSITORY: rails-app-prod
+      IMAGE_NAME: rails-app
     if: github.ref_name == 'main'
     timeout-minutes: 10
 
