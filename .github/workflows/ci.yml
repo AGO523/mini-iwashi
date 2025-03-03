@@ -127,4 +127,5 @@ jobs:
             --image=$REGION-docker.pkg.dev/${{ secrets.GOOGLE_PROJECT_ID }}/$REPOSITORY/$IMAGE_NAME:${{ github.sha }} \
             --region=$REGION \
             --platform=managed \
-            --allow-unauthenticated
+            --allow-unauthenticated \
+            --service-account=${{ secrets.RUN_SERVICE_ACCOUNT }}
