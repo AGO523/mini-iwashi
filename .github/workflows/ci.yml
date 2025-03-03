@@ -129,3 +129,7 @@ jobs:
             --platform=managed \
             --allow-unauthenticated \
             --service-account=${{ secrets.RUN_SERVICE_ACCOUNT }}
+          gcloud run services add-iam-policy-binding $SERVICE_NAME \
+            --member="allUsers" \
+            --role="roles/run.invoker" \
+            --region=$REGION
