@@ -128,6 +128,7 @@ jobs:
             --region=$REGION \
             --platform=managed \
             --allow-unauthenticated \
+            --set-secrets="RAILS_MASTER_KEY=rails-master-key:lastest" \
             --service-account=${{ secrets.RUN_SERVICE_ACCOUNT }}
           gcloud run services add-iam-policy-binding $SERVICE_NAME \
             --member="allUsers" \
